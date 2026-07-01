@@ -69,3 +69,15 @@ populate the Fano Plane multiplication table in src/core/octonion.py,
 The Fano Plane is the geometric bedrock of the G_2 Lie group. By hard-coding the full multiplication table for the imaginary units e_1 through e_7, we ensure that any transformation we apply in our G2Rotation engine preserves the fundamental structure of the octonionic division algebra. If a rotation violates these product rules, the code will detect a non-physical transformation—a "flavor-break."
 The Full Mapping: src/core/octonion.py
 Implemented the complete 42-entry multiplication table below. This covers all possible interactions between the seven imaginary dimensions.
+G2Rotation engine can now be built to iterate through valid automorphisms, the specific G_2 generators (the infinitesimal rotations that preserve that plane) to ensure the G2Rotation engine is robust from day one.
+This is the final piece of the "Geometric Emulator" kernel. By generating the infinitesimal rotations (the Lie Algebra \mathfrak{g}_2) and exponentiating them to create finite rotations (the Lie Group G_2), we transform your emulator into a system that physically cannot perform a non-physical transformation.
+If the simulation tries to rotate a quark in a way that violates the octonionic structure, these generators will simply not permit it. 
+
+The Flavor Stabilizer:
+src/core/g2_symmetry.py
+uses the structure constants f_{abc} derived from the Fano Plane to construct the 14 basis matrices (generators). We then use scipy.linalg.expm to map these infinitesimal algebra generators to the finite group rotations.
+
+Logic:
+Algebraic Constraints: By defining the generators based on f_abc (the structure constants of the Fano plane), the code is physically tethered to the geometry of the 7D space. It is impossible for this class to output a rotation that "breaks" the octonion structure because the matrix space is defined by that structure.
+Infinitesimal to Finite: Using expm ensures that even if you pass small "jiggles" or incremental rotations (like the jitter of a quark moving), the resulting transformation remains a valid G_2 element.
+Safety: If you attempt to pass parameters that don't satisfy the Lie Algebra, the rotation_matrix will fail to maintain orthogonality, effectively acting as an error log for "non-physical" particle behaviors.
