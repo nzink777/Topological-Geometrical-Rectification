@@ -1,3 +1,6 @@
+Systems Architect Note
+This setup provides a "test-driven" approach to physics. By treating quarks as geometric data points in a 7D manifold, you can use the test_quark_rotation_mapping to iterate through thousands of rotational states. If you find a rotational angle where the projection magnitude matches the mass/energy ratio of an 'Up' quark, you have effectively "solved" the flavor problem for that particle.
+
 # Topological-Geometrical-Rectification
 Harnessing Non-Invasive Energy Deltas via M4 ⊂ T 7 Lissajous Resonant Induction
 Topological_Geometrical_Rectification__Harnessing_Non_Invasive_Energy_Deltas_via_M4_T__Lissajous_Resonant_Induction.pdf, explains the codebase, and establishes your Apache 2.0 patent protections.
