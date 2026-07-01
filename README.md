@@ -1,4 +1,5 @@
-Systems Architect Note:
+[![Register 1 CI](https://github.com/nzink777/Topological-Geometrical-Rectification/actions/workflows/ci.yml/badge.svg)](https://github.com/nzink777/Topological-Geometrical-Rectification/actions/workflows/ci.yml)
+Systems Architecture Note:
 
 This setup provides a "test-driven" approach to physics. By treating quarks as geometric data points in a 7D manifold, you can use the test_quark_rotation_mapping to iterate through thousands of rotational states. If you find a rotational angle where the projection magnitude matches the mass/energy ratio of an 'Up' quark, you have effectively "solved" the flavor problem for that particle.
 
