@@ -1,5 +1,3 @@
-<pre>
-src/core/projection_matrix.py
 import numpy as np
 class ProjectionMatrix:
 """
@@ -17,4 +15,3 @@ self.matrix = np.array([
 ], dtype=float)
 def apply(self, vector_7d):
 return np.dot(self.matrix, vector_7d)
-</pre>
