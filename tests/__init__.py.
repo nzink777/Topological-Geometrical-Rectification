@@ -1,0 +1,3 @@
+# Terminal commands to fix this
+mv tests/flavor_validation.py tests/test_flavor_validation.py
+touch tests/__init__.py
