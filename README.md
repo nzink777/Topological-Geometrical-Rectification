@@ -1,5 +1,10 @@
-Systems Architect Note
+Systems Architect Note:
+
 This setup provides a "test-driven" approach to physics. By treating quarks as geometric data points in a 7D manifold, you can use the test_quark_rotation_mapping to iterate through thousands of rotational states. If you find a rotational angle where the projection magnitude matches the mass/energy ratio of an 'Up' quark, you have effectively "solved" the flavor problem for that particle.
+
+The logic of octonions is the "source code" of G_2 symmetry. Because G_2 is defined as the automorphism group of the octonions—transformations that preserve the octonionic product—we need to move the algebra into a dedicated, foundational module.
+We add src/core/octonion.py.
+
 
 # Topological-Geometrical-Rectification
 Harnessing Non-Invasive Energy Deltas via M4 ⊂ T 7 Lissajous Resonant Induction
